@@ -43,14 +43,14 @@ For creating a EMR cluster, follow the next steps:
     
     This command will create a AWS cluster with the settings of emr/dwh.cfg file
     
-    ![cluster_creation](resources/create_cluster.PNG)
+    ![cluster_creation](sparkify/resources/create_cluster.PNG)
 
 3. Execute:
     `python -c 'from cluster import *; cluster_status()'`
     
     The current cluster status will appear in the console. 
     
-    ![cluster_status](resources/cluster_status.PNG)
+    ![cluster_status](sparkify/resources/cluster_status.PNG)
     
     Note MasterPublicDnsName property, this will be the address to connect via ssh to the master node
     
@@ -70,19 +70,19 @@ For creating a EMR cluster, follow the next steps:
         
     `/usr/bin/spark-submit --master yarn etl.py`
    
-    ![cluster_connection](resources/cluster_connection.PNG)
+    ![cluster_connection](sparkify/resources/cluster_connection.PNG)
 
 5. In order to delete the cluster and avoid unexpected charges, execute
  
     `python -c 'from cluster import *; delete_cluster()'`
             
-    ![cluster_info](resources/delete_cluster.PNG)
+    ![cluster_info](sparkify/resources/delete_cluster.PNG)
     
     You can see the instruction status with the following command
     
     `python -c 'from cluster import *; cluster_status()'`
 
-    ![cluster_info](resources/cluster_status.PNG)
+    ![cluster_info](sparkify/resources/cluster_status.PNG)
            
 ## ##########################################
 
